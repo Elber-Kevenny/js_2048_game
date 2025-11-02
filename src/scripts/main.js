@@ -1,10 +1,9 @@
 'use strict';
 
 // Uncomment the next lines to use your game instance in the browser
-const Game = require('../modules/Game.class.js');
-const game = new Game();
+import Game from '../modules/Game.class.js';
 
-Array.from(document.querySelectorAll('.field-cell'));
+const game = new Game();
 
 const scoreEl = document.querySelector('.game-score');
 const mainBtn = document.querySelector('.button.start');

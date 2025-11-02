@@ -119,7 +119,9 @@ class Game {
       this.score += gainedTotal;
       this.addRandomTile();
 
-      if (this.isGameOver()) {
+      if (this.isWon()) {
+        this.status = 'won';
+      } else if (this.isGameOver()) {
         this.status = 'over';
       }
     }
@@ -190,7 +192,9 @@ class Game {
       this.score += gainedTotal;
       this.addRandomTile();
 
-      if (this.isGameOver()) {
+      if (this.isWon()) {
+        this.status = 'won';
+      } else if (this.isGameOver()) {
         this.status = 'over';
       }
     }
@@ -246,7 +250,9 @@ class Game {
       this.score += gainedTotal;
       this.addRandomTile();
 
-      if (this.isGameOver()) {
+      if (this.isWon()) {
+        this.status = 'won';
+      } else if (this.isGameOver()) {
         this.status = 'over';
       }
     }
@@ -341,9 +347,7 @@ class Game {
 
       if (this.isWon()) {
         this.status = 'won';
-      }
-
-      if (this.isGameOver()) {
+      } else if (this.isGameOver()) {
         this.status = 'over';
       }
     }
@@ -378,4 +382,4 @@ class Game {
   }
 }
 
-module.exports = Game;
+export default Game;
